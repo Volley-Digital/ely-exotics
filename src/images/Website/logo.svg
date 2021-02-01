@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204.61" height="41.461" viewBox="0 0 204.61 41.461">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.847" y1="0.007" x2="0.207" y2="1.011" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#534a95"/>
+      <stop offset="1" stop-color="#23236d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="-0.223" y1="0.286" x2="1.142" y2="0.661" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.5" y1="0" x2="0.5" y2="1" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-7" x1="0.214" y1="0.104" x2="0.785" y2="0.896" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-8" x1="0.942" y1="0.246" x2="0.041" y2="0.688" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Group_66" data-name="Group 66" transform="translate(-257.031 -197.767)">
+    <g id="Group_63" data-name="Group 63" transform="translate(291.697 197.767)">
+      <g id="Group_62" data-name="Group 62">
+        <path id="Path_58" data-name="Path 58" d="M375.131,229.715l-5.807,14.355a3.289,3.289,0,0,1-3.148,2.552h-.251a3.14,3.14,0,0,1-2.427-1.11l2.509-6.761,3.888-10.894a2.757,2.757,0,0,1,3.562-1.731A2.86,2.86,0,0,1,375.131,229.715Z" transform="translate(-356.738 -215.012)" fill="url(#linear-gradient)"/>
+        <path id="Path_59" data-name="Path 59" d="M355.393,238.752l-2.509,6.761a4.558,4.558,0,0,1-.84-1.442l-5.77-14.355a2.849,2.849,0,0,1,1.674-3.587,2.775,2.775,0,0,1,3.562,1.731Z" transform="translate(-346.125 -215.012)" fill="url(#linear-gradient-2)"/>
+        <path id="Path_60" data-name="Path 60" d="M395.5,235.974c0-6.357,4.459-10.422,10.023-10.422s10.064,4.065,10.064,10.422-4.5,10.551-10.064,10.551S395.5,242.33,395.5,235.974Zm14.359,0a4.324,4.324,0,1,0-8.632,0,4.333,4.333,0,1,0,8.632,0Z" transform="translate(-376.288 -214.741)" fill="url(#linear-gradient-3)"/>
+        <path id="Path_61" data-name="Path 61" d="M459.891,226.7a2.772,2.772,0,0,1-2.864,2.681,2.855,2.855,0,0,1-2.863-2.681v-26.25a2.855,2.855,0,0,1,2.863-2.68,2.772,2.772,0,0,1,2.864,2.68Z" transform="translate(-412.126 -197.767)" fill="url(#linear-gradient-3)"/>
+        <path id="Path_62" data-name="Path 62" d="M484.282,226.7a2.772,2.772,0,0,1-2.864,2.681,2.855,2.855,0,0,1-2.863-2.681v-26.25a2.855,2.855,0,0,1,2.863-2.68,2.772,2.772,0,0,1,2.864,2.68Z" transform="translate(-427.027 -197.767)" fill="url(#linear-gradient-3)"/>
+        <path id="Path_63" data-name="Path 63" d="M516.885,244.709a11.539,11.539,0,0,1-6.586,1.816c-5.482,0-9.982-4.195-9.982-10.551s4.5-10.422,9.982-10.422c5.441,0,9.778,4.238,9.778,10.595a1.823,1.823,0,0,1-1.76,1.859H506c.287,2.335,2.7,3.33,4.7,3.33a4.969,4.969,0,0,0,3.314-.951,2.561,2.561,0,0,1,3.6.3A2.7,2.7,0,0,1,516.885,244.709Zm-2.536-10.466a3.792,3.792,0,0,0-4.009-3.675,4.066,4.066,0,0,0-4.255,3.675Z" transform="translate(-440.321 -214.741)" fill="url(#linear-gradient-3)"/>
+        <path id="Path_64" data-name="Path 64" d="M574.34,229.715l-9.777,24.954a2.88,2.88,0,0,1-3.6,1.687,2.739,2.739,0,0,1-1.637-3.637l3.186-8.385,2.91-6.617,3.681-9.859a2.778,2.778,0,1,1,5.236,1.856Z" transform="translate(-476.256 -215.012)" fill="url(#linear-gradient-7)"/>
+        <path id="Path_65" data-name="Path 65" d="M561.154,237.717l-2.91,6.617-5.926-14.619a2.778,2.778,0,1,1,5.237-1.856Z" transform="translate(-471.988 -215.012)" fill="url(#linear-gradient-8)"/>
+      </g>
+      <text id="digital" transform="translate(103.944 29.991)" fill="#2c2c2c" font-size="25" font-family="SofiaProSoftLight, Sofia Pro Soft" letter-spacing="-0.03em"><tspan x="0" y="0">digital</tspan></text>
+    </g>
+    <g id="Group_65" data-name="Group 65" transform="translate(257.031 205.249)">
+      <circle id="Ellipse_31" data-name="Ellipse 31" cx="13.248" cy="13.248" r="13.248" fill="url(#linear-gradient-3)"/>
+      <g id="Group_64" data-name="Group 64" transform="translate(5.502 6.263)">
+        <rect id="Rectangle_33" data-name="Rectangle 33" width="4.007" height="15.778" rx="2.003" transform="matrix(0.884, -0.467, 0.467, 0.884, 0, 1.872)" fill="#fff"/>
+        <circle id="Ellipse_32" data-name="Ellipse 32" cx="2.004" cy="2.004" r="2.004" transform="translate(10.272 0.707)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

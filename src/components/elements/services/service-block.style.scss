@@ -1,0 +1,21 @@
+.service-item {
+    transition: 0.3s;
+    &__overlay, &::after, &::before {
+        transition: 0.3s !important;
+    }
+    overflow: hidden;
+    &:hover {
+        &::after {
+            transition: 0.3s;
+            transform: scale(1.1) !important;
+        }
+        transform: translateY(-10px);
+        box-shadow: 0px 5px 30px rgba(0,0,0,0.15);
+        .service-item {
+            &__overlay {
+                background-color: #F08323;
+                opacity: 0.8;
+            }
+        }
+    }
+}

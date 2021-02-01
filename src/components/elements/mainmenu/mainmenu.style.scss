@@ -1,0 +1,17 @@
+.mainmenu {
+    @media screen and (max-width: 767px) {
+        position: fixed;
+        transition: 0.3s;
+        z-index: 10000;
+        top: 0;
+        background-color: #443E8A;
+        color: #F7F6FA;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        box-shadow: 15px 0px 30px rgba(0,0,0,0.15);
+        &--out {
+            left: 0;
+        }
+    }
+}
