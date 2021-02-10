@@ -1,11 +1,19 @@
-@import url("https://use.typekit.net/phn7hqw.css");
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800;1,900&family=Nunito:wght@300;700&display=swap');
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 body, p, a, * {
-    font-family: sofia-pro-soft, sans-serif;
-    color: hsla(0,0%,0%,0.5);
+    font-family: 'Nunito', sans-serif;
     font-display: swap;
 }
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+span {
+    font-family: inherit
+}
+
 p {
     white-space: pre-wrap;
 }
@@ -15,22 +23,26 @@ body {
 }
 
 .heading-font {
-    font-family: sofia-pro, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .text-font {
-    font-family: sofia-pro-soft, sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
- .bg-grey-cut {
-    background-image: linear-gradient(to bottom, #F7F6FA, #F7F6FA 85%, #ffffff 85%, #ffffff,);
- }
+
+.list-alpha {
+    list-style: lower-alpha;
+}
+.list-numbers {
+    list-style: decimal;
+}
 
  .blog {
-    p {margin-bottom: 1rem; font-family: sofia-pro-soft, sans-serif;}
+    p {margin-bottom: 1rem; font-family: 'Nunito', sans-serif, sans-serif;}
 
     h1, h2, h3, h4, h5 {
       margin: 3rem 0 1rem;
-      font-family: sofia-pro, sans-serif;
+      font-family: 'Nunito Sans', sans-serif;
       font-weight: 400;
       line-height: 1.3;
     }
@@ -39,8 +51,13 @@ body {
         font-family: inherit;
         color: inherit;
     }
+    ul {
+        list-style: disc;
+        margin-left: 1.2rem;
+    }
+
     a {
-        color: #443E8A;
+        color: #FDC408;
     }
     h1 {
       margin-top: 0;
@@ -56,4 +73,57 @@ body {
     h5 {font-size: 1.25rem;}
     
     small, .text_small {font-size: 0.8rem;}
+ }
+
+ .highlighted {
+    &-textfull {
+        span {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -1rem;
+                top: -0.35rem;;
+                bottom: -0.35rem;
+                right: -1rem;
+                transform: rotate(1deg);
+                background:#272D3D;
+                z-index: -1;
+            }
+        }
+    }
+    &-text {
+        span {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -8%;
+                top: 0;
+                bottom: 0;
+                right: 6%;
+                transform: rotate(1.5deg);
+                background: rgb(253,196,8);
+                background: linear-gradient(180deg, rgba(253,196,8,1) 0%, rgba(233,165,9,1) 100%);
+                z-index: -1;
+            }
+        }
+    }
+ }
+
+ .hovericon {
+     transition: 0.3s;
+
+     &__icon {
+        transition: 0.3s;     
+    }
+     &:hover {
+        opacity: 0.8;
+        .hovericon {
+            &__icon {
+                transform: translateX(5px);
+                
+            }
+        }
+     }
  }

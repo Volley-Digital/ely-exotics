@@ -1,0 +1,12 @@
+.overview-item {
+    max-width: 140px;
+    &--large {
+        max-width: 180px;
+    }
+    @media screen and (max-width: 1023px){
+        flex: 0 0 10.5rem;
+    }
+    @media screen and (max-width: 767px){
+        flex: 0 0 8.5rem;
+    }
+}

@@ -7,39 +7,39 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        '5xl' : '2.9rem',
-        '4xl' : '2.3rem',
-        '3xl' : '1.6rem',
-        '2xl' : '1.3rem',
-        'sm' : '0.87rem'
+        '5xl' : '4.5rem',
+        '4xl' : '2.6rem',
+        '3xl' : '2rem',
+        '2xl' : '1.8rem',
+        'xl' : '1.5rem',
+        'lg': '1.25rem',
+        'base': '1.1rem',
+        'sm' : '1rem',
+        'xs' : '0.8rem',
       },
       maxWidth: {
+        'screen-3xl': '1700px',
         'screen-2xl': '1400px',
         'screen-xl': '1150px',
-
       },
       colors: {
         white: {
-          default: '#fff',
-          '100': '#F7F6FA',
-          '200': '#d4d4d4'
+          'default': '#F2F7E9',
+          '0': '#ffffff', 
         },
         primary: {
-          default: '#443E8A',
-          dark: '#3F2E7F',
-          light: '#705CA4'
+          'default': '#F8B00C',
+          dark: '#E9A509',
+          light: '#FDC408'
         },
         secondary: {
-          default: '#FFA44A',
-          dark: '#F08323',
-          light: '#FCAA59'
+          'default': '#00B879',
         },
         black: {
-          default: '#3A3A3A',
-          light: '#999999'
+          'default': '#272D3D',
         },
-        green: {
-          default: '#23F0AA'
+        red: {
+          'default': '#F36336'
         }
       },
       boxShadow: {

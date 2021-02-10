@@ -1,0 +1,39 @@
+.category-item {
+    &__linkhover {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, 55%);
+    }
+    &__image {
+        &::after, &::before {
+            transition: 0.3s !important;;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 30px 60px rgba(0,0,0,0.15);
+        transform: translateY(-15px);
+        .category-item {
+            &__image {
+                &::after, &::before {
+                    transition: 0.3s;
+                    transform: scale(1.1) !important;
+                }
+            }
+            &__care {
+                transform: translateY(10px);
+            }
+            &__linkhover {
+                transform: translate(-50%, -50%);
+            }
+            &__link {
+                transform: translateY(-100%);
+            }
+            &__linkbg {
+                left: 0;
+                top: 5px;
+                right: 0;
+                bottom: 5px;
+            }
+        }
+    }
+}

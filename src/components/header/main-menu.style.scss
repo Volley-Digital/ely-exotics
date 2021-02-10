@@ -1,0 +1,20 @@
+.menu {
+    &__childlist {
+        top: 100%;
+        color: white;
+        transform: translateY(10px);
+        visibility: hidden;
+        box-shadow: 0px 30px 30px rgba(0,0,0,0.6);
+    }
+    &__parent {
+        &:hover {
+            .menu {
+                &__childlist {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}

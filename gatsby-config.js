@@ -5,9 +5,9 @@ const fullConfig = resolveConfig(tailwindConfig);
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Tailwind`,
-    description: `Gatsby starter styled with Tailwind`,
-    author: `@volleydigital`,
+    title: `Ely Exotics`,
+    description: `Exotic Pet Store based in Ely, Cambridgeshire`,
+    author: `@elyexotics`,
     siteUrl: `localhost:8000`
   },
   plugins: [
@@ -21,15 +21,15 @@ module.exports = {
         background_color: fullConfig.theme.colors.white.default,
         theme_color: fullConfig.theme.colors.black.default,
         display: `minimal-ui`,
-        icon: `src/images/tailwind-icon.png`,
+        icon: `src/images/eye-logo.png`,
       },
     },
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `hdh319aa408c`,
+        spaceId: `428i7jjapo0m`,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: 'cXbv4yIUYHC7g8_1eoPpKszmMXdzs-DW3sOMdcJT8Io',
+        accessToken: '2c6Xcslv8WWpisMKJVe_f_rs_RdCITW93fw8gtffJHE',
         downloadLocal: true,
       },
     },
@@ -52,11 +52,11 @@ module.exports = {
         name: `images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
+    { 
+      resolve: `@awolf81/gatsby-theme-addthis`, 
       options: {
-        pathToConfigModule: `src/styles/type/typography`,
-      },
+        publicId: 'ra-602140e286141d63'
+      } 
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

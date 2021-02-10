@@ -1,0 +1,40 @@
+.post-preview {
+    &__title, &__details, &__overlay, &__linktext {
+        transition: 0.3s;
+    }
+    &__title {
+        transition-delay: 0.08s;
+        max-width: 90%;
+    }
+    &__image {
+        overflow: hidden;
+        &::after, &::before {
+            transition: 0.3s !important;
+        }
+    }
+    &__linktext {
+        transform: translateY(10px);
+    }
+    &:hover {       
+        .post-preview {
+            &__image {
+                &::after {
+                    transition: 0.3s;
+                    transform: scale(1.1) !important;
+                }
+            }
+           &__details {
+                transform: translateY(-10px);
+            }
+            &__title {
+                transform: translateY(-20px);
+            }
+            &__overlay {
+                opacity: 1;
+            }
+            &__linktext {
+                transform: translateY(0);
+            }
+        }
+    }
+}

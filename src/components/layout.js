@@ -3,27 +3,70 @@ import React from "react";
 import Header from "./header/header.component";
 import Footer from "./footer/footer.component";
 
-const Layout = ({ children, noOverlayHeader }) => {
-  const mainMenu =[
-    {text: 'home', url: '/'},
-    {text: 'websites', url: '/websites'},
-    {text: 'about', url: '/about'},
-    {text: 'our work', url: '/case-studies'},
-    {text: 'news', url: '/news'},
+import dropdown from '../images/Icons/dropdown.svg'
+import info from '../images/Icons/info-icon.svg'
+
+const Layout = ({ children }) => {
+
+  const mainMenu = [
+    {
+      icon: dropdown,
+      text: 'Animals',
+      url: '#',
+      sub: [
+        {
+          text: 'Amphibians',
+          url: '/amphibians'
+        },
+        {
+          text: 'Aquatics',
+          url: '/aquatics'
+        },
+        {
+          text: 'Invertebrates',
+          url: '/invertebrates'
+        },
+        {
+          text: 'Plant',
+          url: '/plant'
+        },
+        {
+          text: 'Reptiles',
+          url: '/reptiles'
+        }
+      ]
+    },
+    {
+      icon: info,
+      text: 'Care Gudies',
+      url: '/care-guides'
+    },
+    {
+      text: 'Showcase',
+      url: '/gallery'
+    },
+    {
+      text: 'About',
+      url: '/about'
+    },
+    {
+      text: 'News',
+      url: '/news'
+    },
+    {
+      text: 'Contact',
+      url: '/contact'
+    },
   ]
-  const footerMenu =[
-    {text: 'Privacy', url: '/privacy'},
-    {text: 'Terms', url: '/terms'},
-    {text: 'Sitemap', url: '/sitemap'},
-    {text: 'Contact', url: '/contact'},
-  ]
+  
+
   return (
-    <div className="min-h-screen">
-      <Header noOverlay={noOverlayHeader} menu={mainMenu} />
+    <div className="min-h-screen bg-white-default">
+      <Header menu={mainMenu} />
       <main>
         {children}
       </main>
-      <Footer menu={footerMenu} />
+      <Footer menu={mainMenu} menu2={mainMenu[0].sub} />
     </div>
   );
 }
