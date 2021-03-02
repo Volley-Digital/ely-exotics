@@ -14,7 +14,6 @@ const FilteredBlocks = ({blocks}) => {
     let styledItems = [];
 
     if (blocks) blocks.forEach(block => {
-        console.log(block)
         switch(block.internal.type) {
             case 'ContentfulReviewShowcaseBlock' :
                 styledItems.push(

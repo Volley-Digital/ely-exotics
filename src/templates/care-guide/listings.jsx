@@ -14,7 +14,6 @@ export default ({data, pageContext}) => {
     const isLast = currentPage === numPages
     const prevPage = currentPage - 1 === 1 ? "/care-guides" : `/care-guides/${(currentPage - 1).toString()}`
     const nextPage = `/care-guides/${(currentPage + 1).toString()}`
-    console.log(isLast, isFirst)
     return (
         <Layout noOverlayHeader>
         <SEO

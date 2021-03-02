@@ -8,7 +8,7 @@ const BgImageTextWithImage = ({bgImage, image, title, text1, text2, marginBottom
         fluid={bgImage}
         className={`relative ${marginBottom && 'mb-10 md:mb-16 lg:mb-20'}`}
     >
-        <div className="max-w-screen-2xl mx-auto py-10 md:py-16 lg:py-20 relative z-10 text-white-0">
+        <div className="max-w-screen-2xl mx-auto py-10 md:py-16 lg:py-28 relative z-10 text-white-0">
             <div className="px-6 md:px-8 w-full md:w-3/5">
                 {title && <h2 className="highlighted-text text-2xl md:text-3xl font-black italic mb-5" dangerouslySetInnerHTML={{__html: title}} />}
                 <div className="flex flex-wrap">
