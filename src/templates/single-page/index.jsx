@@ -175,6 +175,22 @@ query($id: String!) {
               type
             }
           }
+          ... on ContentfulTextImageBlock {
+            id
+            title
+            image {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 430, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            internal {
+              type
+            }
+          }
           ... on ContentfulReviewShowcaseBlock {
             id
             stars
