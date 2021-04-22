@@ -22,14 +22,14 @@ export default ({data}) => {
   return (
     <Layout noOverlayHeader>
         <SEO
-        title={`Care Guide: ${page.animalTitle}`}
+        title={`${page.animalTitle} Care Guide`}
         />
         <HeroCare 
           subTitle="Care Guide For"
           title={page.animalTitle} 
-          image={page.backgroundImage.localFile.childImageSharp.fluid} 
-          colour={page.relatedCategory.colour.colour}
-          relatedAnimal={setSlug(page.productPage.slug, page.productPage)}
+          image={page.backgroundImage && page.backgroundImage.localFile.childImageSharp.fluid} 
+          colour={page.relatedCategory.colour.colour && page.relatedCategory.colour.colour}
+          relatedAnimal={page.productPage && setSlug(page.productPage.slug, page.productPage)}
         />
         <Overview items={page.overviewItems} />
         {(page.intro || page.equipmentItemsNeeded) && <div className="bg-black-default mb-10 md:mb-16 md:mb-20">
@@ -85,12 +85,14 @@ export default ({data}) => {
           <Accordian title="FAQs" questions={page.faqs} />
           </section>
         </div>}
-        <Newsletter 
+        {page.newsletter && 
+          <Newsletter 
             title={page.newsletter.heading} 
             text={page.newsletter.text}
             image={page.newsletter.image.localFile.childImageSharp.fluid} 
             bgColour={page.relatedCategory.colour.colour}
-        />
+          />
+        }
     </Layout>
   )
 }
@@ -101,7 +103,6 @@ const typeOptions = {
       <p className="w-full px-1">{children}</p>
     ),
     [BLOCKS.EMBEDDED_ASSET]: node => {
-      console.log(node)
       const {
           localFile: { childImageSharp },
         title,

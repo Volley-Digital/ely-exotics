@@ -1,10 +1,7 @@
 .header {
     z-index: 1000000;
     &__logo {
-        width: 251px;
-        @media screen and (max-width: 1023px) {
-            width: 180px;
-        }
+      width: 160px;
     }
     &__icon {
         top: 50%;

@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import GetDirections from '../elements/get-directions/get-directions.component';
 import MainMenu from './menu.component';
 
-import logo from '../../images/Icons/ely-exotics-logo-text.svg';
+import logo from '../../images/ely-exotics-logo.png';
 import phone from '../../images/Icons/phone.svg'
 import email from '../../images/Icons/email.svg'
 

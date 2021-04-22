@@ -16,7 +16,7 @@ const Hero = ({title, text, image, showSocial, phone, colour = "272D3D"}) => {
         >   
             <div className={`pb-24 md:pb-48 pt-40 md:pt-64 max-w-screen-2xl mx-auto w-full px-6 md:px-8 relative z-10`}>
                 {title && <h1 className={`max-w-4xl leading-none text-3xl sm:text-4xl lg:text-5xl font-black italic text-white-default mb-5`}>{title}</h1>}   
-                {text && <p className="font-light block max-w-xl" dangerouslySetInnerHTML={{__html: text}} />}
+                {text && <p className="font-light md:text-base block max-w-xl" dangerouslySetInnerHTML={{__html: text}} />}
  
             </div>
             {showSocial && <div className="z-10 w-full max-w-screen-2xl mx-auto bottom-4 absolute px-6 md:px-8 py-4 hidden md:block">

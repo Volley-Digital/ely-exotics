@@ -12,6 +12,7 @@ const Layout = ({ children }) => {
     {
       icon: dropdown,
       text: 'Animals',
+      order: 'order-first',
       url: '#',
       sub: [
         {
@@ -39,15 +40,19 @@ const Layout = ({ children }) => {
     {
       icon: info,
       text: 'Care Gudies',
-      url: '/care-guides'
+      url: '/care-guides',
+      order: 'order-first'
     },
     {
       text: 'Showcase',
-      url: '/gallery'
+      url: '/gallery',
+      hidden: true
     },
     {
       text: 'About',
-      url: '/about'
+      url: '/about',
+      hidden: true
+
     },
     {
       text: 'News',
@@ -56,6 +61,11 @@ const Layout = ({ children }) => {
     {
       text: 'Contact',
       url: '/contact'
+    },
+    {
+      text: 'Shop',
+      url: '#',
+      order: 'order-first'
     },
   ]
   

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Link} from 'gatsby';
 import throttle from 'underscore/modules/throttle.js'
 
@@ -14,8 +14,9 @@ const Header = ({menu, noOverlay}) => {
   let halfOfMenu = Math.floor(menu.length / 2);
   let menuFirstHalf = menu.slice(0, halfOfMenu);
   let menuSecondHalf = menu.slice(halfOfMenu, menu.length);
-  
-  const headerScroll = throttle(() => {
+  useEffect(() => {
+
+    const headerScroll = throttle(() => {
       // Detect scroll position
       let scrollPosition = Math.round(window.scrollY);
 
@@ -28,20 +29,22 @@ const Header = ({menu, noOverlay}) => {
           document.querySelector('.header').classList.remove('header--scrolled');
       }
     
-  }, 150)
+    }, 150)
 
-  if (typeof window !== `undefined` || typeof document !== `undefined`) {
-    window.addEventListener('scroll', headerScroll);
-    document.addEventListener('DOMContentLoaded', headerScroll);
-  }
+    if (typeof window !== `undefined` || typeof document !== `undefined`) {
+      window.addEventListener('scroll', headerScroll);
+      document.addEventListener('DOMContentLoaded', headerScroll);
+    }
+
+  }, []);
 
   return (
-    <header className="header duration-300 text-white-0 fixed z-50 flex flex-wrap justify-between items-center w-full px-6 py-4 md:px-8 md:py-6 bg-transparent">
+    <header className="header duration-300 text-white-0 fixed z-50 flex justify-between items-center w-full px-6 py-4 md:px-8 md:py-6 bg-transparent">
       <div className="flex items-center justify-between md:w-full max-w-screen-3xl md:mx-auto">
         {menuFirstHalf && <MainMenu menu={menuFirstHalf} />}
-        <Link to="/">
+        <Link className="mr-6 md:mr-0 flex-shrink" to="/">
           <div className="relative">
-            <img className="header__logo duration-300 w-40" src={logo} alt="Ely Exotics Logo" />
+            <img className="header__logo duration-300 w-32" src={logo} alt="Ely Exotics Logo" />
             <svg className="header__icon absolute duration-300 opacity-0" width="155.966" height="146.803" viewBox="0 0 155.966 146.803">
               <defs>
                 <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
@@ -81,7 +84,7 @@ const Header = ({menu, noOverlay}) => {
             </svg>
           </div>
         </Link>
-        {menuSecondHalf && <MainMenu right menu={menuSecondHalf} />}
+        {menuSecondHalf && <MainMenu right shop menu={menuSecondHalf} />}
       </div>
       {menu && <MobileMenu menu={menu} />}
     </header>
