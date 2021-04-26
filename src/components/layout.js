@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
     },
     {
       text: 'Shop',
-      url: '#',
+      url: 'http://138.68.190.194',
       order: 'order-first'
     },
   ]
