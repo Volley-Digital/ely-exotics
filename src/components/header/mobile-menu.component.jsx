@@ -1,10 +1,22 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from "gatsby";
 
 import './mobile-menu.style.scss'
 
 const MobileMenu = ({menu}) => {
-    const [isExpanded, toggleExpansion] = useState(false);
+  const [isExpanded, toggleExpansion] = useState(false);
+
+  useEffect(() => {
+    const parentEls = Array.from(document.querySelectorAll('.mobile-parent'));
+    if (parentEls) {
+      parentEls.forEach(el => {
+        el.addEventListener('click', () => {
+          if(el.querySelector('.mobile-sub')) el.querySelector('.mobile-sub').classList.toggle('hidden')
+        })
+      })
+    }
+  }, [])
+
     return (
         <div className="flex items-center md:hidden">
           <a className="mr-4" href="http://138.68.190.194/my-account/">
@@ -57,12 +69,24 @@ const MobileMenu = ({menu}) => {
                 </div>
                 {menu && menu.map((link, i) => (
                     <Link
-                    className={`${link.order} block mt-4 duration-300 md:hover:text-primary-dark flex flex-wrap items-center`}
+                    className={`${link.order} mobile-parent block mt-4 duration-300 md:hover:text-primary-dark flex flex-wrap items-center`}
                     key={link.text}
                     to={link.url}
                     activeClassName="font-bold text-white-default md:text-primary"
                     >
                     {link.icon && <img className="w-3 mr-2" src={link.icon} alt={link.text} />}  {link.text}
+                      {link.sub && <div className="mobile-sub pt-4 hidden duration-300 w-full">
+                          {link.sub.map(link => (
+                              <Link
+                              className={`md:mt-0 duration-300 md:hover:opacity-50 font-light text-sm flex flex-wrap items-center mb-2 pb-1 border-b border-solid`}
+                              key={link.text}
+                              to={link.url}
+                              activeClassName="font-regular text-white-default md:text-white-default heading-font"
+                              >
+                                  {link.icon && <img className="w-3 mr-2" src={link.icon} alt={link.text} />} {link.text}
+                              </Link>
+                          ))}
+                      </div>}
                     </Link>
                 ))}
             </nav>

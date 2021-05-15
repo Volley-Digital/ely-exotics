@@ -187,6 +187,10 @@ query($id: String!) {
                 }
               }
             }
+            spacingBottom
+            textItem {
+              textItem
+            }
             internal {
               type
             }
@@ -254,6 +258,15 @@ query($id: String!) {
             email 
             phone
             openingHours
+            spacingBottom
+            internal {
+              type
+            }
+          }
+          ... on ContentfulTextBlock {
+            textArea {
+              raw
+            }
             spacingBottom
             internal {
               type

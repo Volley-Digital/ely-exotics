@@ -9,6 +9,8 @@ import Instagram from '../instagram/instagram.component';
 import GalleryWrapper from '../gallery/galley-wrapper.component';
 import Map from '../map/map.component';
 import ContactDetailsWithForm from '../contact-details-with-form/contact-details-with-form.component';
+import ImageWithText from '../image-with-text/image-with-text.component';
+import TextBlock from '../text-block/text-block.component';
 
 const FilteredBlocks = ({blocks}) => {
     let styledItems = [];
@@ -80,6 +82,7 @@ const FilteredBlocks = ({blocks}) => {
                     />
                 )
             break; 
+
             case 'ContentfulGalleryBlock' :
                 styledItems.push(
                     <GalleryWrapper images={block.images} marginBottom={block.spacingBottom} />
@@ -91,6 +94,7 @@ const FilteredBlocks = ({blocks}) => {
                     <Map embedLink={block.embedLink.embedLink} showGetDirections={block.showGetDirections} marginBottom={block.spacingBottom} />
                 )
             break; 
+
             case 'ContentfulContactDetailsAndFormBlock' :
                 styledItems.push(
                     <ContactDetailsWithForm 
@@ -102,6 +106,26 @@ const FilteredBlocks = ({blocks}) => {
                         marginBottom={block.spacingBottom}
                     />
                 )
+            break; 
+
+            case 'ContentfulTextBlock' :
+              styledItems.push(
+                <TextBlock 
+                  text={block.textArea}
+                  marginBottom={block.spacingBottom}
+                />
+              )
+            break; 
+
+            case 'ContentfulTextImageBlock' :
+              styledItems.push(
+                <ImageWithText 
+                  title={block.title} 
+                  text={block.textItem.textItem} 
+                  image={block.image.localFile.childImageSharp.fluid}
+                  marginBottom={block.spacingBottom}
+                />
+              )
             break; 
 
             default:
