@@ -30,7 +30,7 @@ module.exports = async ({ graphql, actions }) => {
     createCareGuideListings(createPage, careGuides.nodes, 15)
 
     // Create a page for each "post"
-    posts.nodes.forEach(post =>  createSinglePost(createPage, post));
+    posts.nodes.forEach(post => createSinglePost(createPage, post));
 
     // Create the listing pages for "posts"
     createPostListings(createPage, posts.nodes, 8)

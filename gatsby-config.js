@@ -63,6 +63,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`, 
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-no-index`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
