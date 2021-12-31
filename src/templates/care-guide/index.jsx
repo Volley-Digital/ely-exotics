@@ -130,21 +130,6 @@ query($id: String!) {
         }
       }
       productPage {
-        ... on ContentfulAnimal {
-          slug
-          parentCategory {
-            slug
-            parents {
-              slug
-              parents {
-                slug
-                parents {
-                  slug
-                }
-              }
-            }
-          }
-        }
         ... on ContentfulCategories {
           slug
           parents {

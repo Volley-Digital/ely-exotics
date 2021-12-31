@@ -3,7 +3,7 @@ import {Link} from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import InStock from '../../elements/in-stock/in-stock.component';
 
-const FeaturedAnimal = ({title, slug, inStock, colour, image}) => {
+const FeaturedAnimal = ({title, slug, inStock, colour, image, price, type, latin, additionalText}) => {
 
     
     return (
@@ -17,16 +17,19 @@ const FeaturedAnimal = ({title, slug, inStock, colour, image}) => {
                     >
                         <div className={`category-item__care duration-300 absolute z-10 top-2 right-0`}>
                             <InStock inStock={inStock} />
+                            
                         </div>
                     </BackgroundImage>
                 </div>
-                <header className="pt-10 pb-8 relative z-10 px-6 md:px-8 flex-1 flex flex-col items-center justify-center">
-                    {title &&<h4 className="text-2xl md:text-3xl font-black italic leading-none">{title}</h4>}
-                    <div className="relative overflow-hidden inline-block heading-font text-lg p-2">
-                        <span className="category-item__link inline-block relative z-10 duration-300">View page</span>
-                        <span className="category-item__linkhover block absolute z-10 duration-300">GO!</span>
-                        <div style={{backgroundColor: `#${colour}`}} className="category-item__linkbg absolute left-0 bottom-3 top-5 right-5 duration-300" />
-                    </div>
+                <header className="pt-10 pb-8 relative z-10 px-6 flex-1 flex flex-col items-center justify-center">
+                    {(title || latin) && <div className="mb-4">
+                      {title &&<h4 className="text-xl md:text-2xl font-black italic leading-none mb-2">{title}</h4>}
+                      {latin &&<span className="text-sm md:text-lg font-black italic leading-none block mb-2">"{latin}"</span>}
+                      {type &&<span className="text-sm md:text-md font-black italic leading-none">{type}</span>}
+
+                    </div>}
+                    {price &&<span className="text-lg md:text-xl font-black underline italic text-secondary-default leading-none">£{price}</span>}
+                    {additionalText &&<span className="text-sm font-black italic leading-none mt-1">{additionalText}</span>}
                 </header>
             </article>
         </Link>

@@ -18,6 +18,7 @@ export default ({data}) => {
         title={category.title}
         text={category.text.text}
         image={category.backgroundImage.localFile.childImageSharp.fluid}
+        phone="01353 655 794"
       />
       <div className="bg-black-default -mt-24 md:-mt-32">
       <FeaturedAnimalListings animals={category.animal} colour={category.colour.colour}/>
@@ -46,6 +47,10 @@ query($id: String!) {
     animal {
       title
       slug
+      latin
+      type
+      price
+      additionalPriceText
       inStock
       parentCategory {
         colour {

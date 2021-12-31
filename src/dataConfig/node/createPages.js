@@ -7,7 +7,6 @@ const {createCareGuideListings} = require(`./helpers/createCareGuideListings`)
 const {createSinglePost} = require(`./helpers/createSinglePost`)
 const {createPostListings} = require(`./helpers/createPostListings`)
 const { createTaxonomyListings } = require('./helpers/createTaxonomyListing')
-const { createAnimalPage } = require('./helpers/createAnimalPage')
 
 module.exports = async ({ graphql, actions }) => {
     const {createPage} = actions; // actions is undefined
@@ -19,9 +18,6 @@ module.exports = async ({ graphql, actions }) => {
 
     // Create a page for each "page"
     pages.nodes.forEach(page => createSinglePage(createPage, page));
-    // Create a page for each "animal"
-
-    animals.nodes.forEach(animal => createAnimalPage(createPage, animal));
 
     // Create a page for each "care guide"
     careGuides.nodes.forEach(page => createCareGuidePage(createPage, page));
@@ -53,10 +49,8 @@ module.exports = async ({ graphql, actions }) => {
 
         // Format template and use the direct string as ref to the template file
         let template = category.template.replace(/\s+/g, '-').toLowerCase()
-
+        
         createCategoryPage(createPage, category.id, template, slug)
-    
-
     });
 
 }
