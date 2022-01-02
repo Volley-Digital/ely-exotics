@@ -1,8 +1,10 @@
 import React,{useState} from 'react';
-import ModalVideo from 'react-modal-video';
 import Img from 'gatsby-image';
+import loadable from '@loadable/component'
 
 import play from '../../../images/Icons/play.svg';
+
+const ModalVideo = loadable.lib(() => import('react-modal-video'))
 
 const YoutubePopUp = ({videoID, image}) => {
     const [isOpen, setOpen] = useState(false)
