@@ -64,11 +64,11 @@ module.exports = {
     `gatsby-plugin-sass`, 
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-no-index`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     //trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
   ],
 };
