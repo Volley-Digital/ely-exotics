@@ -72,3 +72,10 @@ module.exports = {
     // },
   ],
 };
+
+
+process.env.GATSBY_CONCURRENT_DOWNLOAD = 1
+// Use this as a fix if connection is super slow -- Same with above
+// process.env.GATSBY_STALL_RETRY_LIMIT=10
+// process.env.GATSBY_STALL_TIMEOUT=30000000
+// process.env.GATSBY_CONNECTION_TIMEOUT=30000000

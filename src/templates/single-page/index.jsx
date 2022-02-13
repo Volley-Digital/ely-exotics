@@ -6,7 +6,7 @@ import SEO from "../../components/seo";
 import Hero from "../../components/blocks/hero/hero.component";
 import FilteredBlocks from "../../components/blocks/filtered-blocks/filtered-blocks.component";
 
-export default ({data}) => {
+const index = ({data}) => {
   const {page} = data
   return (
     <Layout noOverlayHeader>
@@ -275,3 +275,5 @@ query($id: String!) {
       }
   }
 }`
+
+export default index
