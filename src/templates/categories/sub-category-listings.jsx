@@ -21,13 +21,21 @@ export default ({data}) => {
         image={category.backgroundImage.localFile.childImageSharp.fluid}
         phone="01353 655 794"
         colour={category.colour.colour}
+        pdf={category.pdfLink ? category.pdfLink.file.url : null}
       />
-      <div className="pt-10 pb-6 md:pt-20 md:pb-10">
-        <CategoryListing 
-          title={category.subItemsText} 
-          categories={category.categories}
-        />
-      </div>
+      {category.categories ? 
+        <div className="pt-10 pb-6 md:pt-20 md:pb-10">
+          <CategoryListing 
+            title={category.subItemsText} 
+            categories={category.categories}
+          />
+        </div>
+      :  
+        <div className="pt-10 pb-10 md:pt-20 md:pb-20 px-4 text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black italic">{category.title} Coming Soon!</h2>
+          <p>Sorry we currently don't have our stock avaliable on the website- visit us in store or give us a call to see our stock</p>
+        </div> 
+      }
       <Newsletter 
         title={category.newsletter.heading} 
         text={category.newsletter.text}
@@ -78,6 +86,11 @@ query($id: String!) {
     subItemsText
     text {
       text
+    }
+    pdfLink {
+      file {
+        url
+      }
     }
     backgroundImage {
         localFile {

@@ -45,7 +45,7 @@ const Hero = ({title, subTitle, image, showSocial, fullHeight, getDirections, ma
                 }      
             </div>
             {(showSocial && fullHeight) && <div className="z-10 w-full max-w-screen-3xl mx-auto bottom-4 absolute px-6 md:px-8 py-4 hidden md:block">
-                <Socials yt="#" instagram="#" facebook="#"/>
+                <Socials instagram="https://www.instagram.com/elyexotics/?hl=en" facebook="https://www.facebook.com/Ely-Exotics-107393574639300/"/>
             </div>
             }
             {getDirections && <div className="z-10 right-0 bottom-0 absolute bg-secondary-default px-6 md:px-8 py-2 md:py-4">

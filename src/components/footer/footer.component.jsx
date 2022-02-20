@@ -56,7 +56,9 @@ const Footer = ({menu, menu2}) => {
           </div>
           <div className="w-full md:w-1/5">
             <div className="w-full lg:flex-1 flex flex-col">
-              <h4 className="text-2xl font-black italic heading-font leading-none mb-2">Contact details</h4>
+              <h4 class="text-2xl font-black italic heading-font leading-none mb-2">Opening Hours</h4>
+              <p class="font-black italic heading-font"><strong>Mon - Fri:</strong> 10am – 6pm</p>
+              <p class="font-black italic heading-font mb-5"><strong>Sat - Sun:</strong> 10am – 4pm</p>
               <a className="hover:opacity-75 duration-300 hover:text-primary-default flex items-center justify-center md:justify-start font-black italic heading-font mb-2" href="tel:01353655794"><img className="mr-2" src={phone} alt="Phone" /> 01353 655 794</a>
               <a className="hover:opacity-75 duration-300 hover:text-primary-default flex items-center justify-center md:justify-start font-black italic heading-font" href="mailto:info@elyexotics.co.uk"><img className="mr-2"  src={email} alt="Email" /> info@elyexotics.co.uk</a>
             </div>

@@ -12,7 +12,7 @@ const MainMenu = ({menu, right, shop}) => {
         <nav className={`${menuClasses} hidden md:flex md:items-center z-10 relative flex-1`}>
             {menu && menu.map((link, i) => (
                 <Link
-                className={`menu__parent ${menuItemClasses} ${i === 0 && 'md:ml-4 lg:ml-8 xl:ml-16'} ${link.hidden ? 'hidden lg:flex' : 'flex'} md:mt-0 duration-300 md:hover:text-primary-dark font-bold text-sm whitespace-nowrap items-center relative`}
+                className={`menu__parent ${menuItemClasses} ${link.hidden ? 'hidden lg:flex' : 'flex'} md:mt-0 duration-300 md:hover:text-primary-dark font-bold text-sm whitespace-nowrap items-center relative`}
                 key={link.text}
                 to={link.url}
                 activeClassName="font-black text-white-default md:text-primary-default heading-font"

@@ -18,11 +18,18 @@ export default ({data}) => {
         title={category.title}
         text={category.text.text}
         image={category.backgroundImage.localFile.childImageSharp.fluid}
-        phone="01353 655 794"
+        pdf={category.pdfLink ? category.pdfLink.file.url : null}
       />
-      <div className="bg-black-default -mt-24 md:-mt-32">
-      <FeaturedAnimalListings animals={category.animal} colour={category.colour.colour}/>
-      </div>
+       {category.animal ? 
+        <div className="bg-black-default -mt-24 md:-mt-32">
+          <FeaturedAnimalListings animals={category.animal} colour={category.colour.colour}/>
+        </div>
+      :  
+        <div className="pt-10 pb-10 md:pt-20 md:pb-20 px-4 text-center">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-black italic">{category.title} Coming Soon!</h2>
+          <p>Sorry we currently don't have our stock avaliable on the website- visit us in store or give us a call to see our stock</p>
+        </div> 
+      }
       <Newsletter 
         title={category.newsletter.heading} 
         text={category.newsletter.text}
@@ -43,6 +50,11 @@ query($id: String!) {
     subItemsText
     text {
       text
+    }
+    pdfLink {
+      file {
+        url
+      }
     }
     animal {
       title
