@@ -58,6 +58,12 @@ module.exports = {
         publicId: 'ra-602140e286141d63'
       } 
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://elyexotics.us14.list-manage.com/subscribe/post?u=7cec6f079bd8931ddfc185be8&amp;id=f98ae0fe2e',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,

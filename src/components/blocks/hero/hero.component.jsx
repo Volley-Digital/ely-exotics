@@ -39,7 +39,7 @@ const Hero = ({title, subTitle, image, showSocial, fullHeight, getDirections, ma
                         text={primaryButtonText}
                     />}
                     {showDropdown && <span className="block sm:hidden pb-3 w-full" /> }
-                    {showDropdown && <LightDropdownLinks categories={categories.nodes} title="find an species" />}
+                    {showDropdown && <LightDropdownLinks categories={categories.nodes} title="find a species" />}
                    
                 </div>     
                 }      
