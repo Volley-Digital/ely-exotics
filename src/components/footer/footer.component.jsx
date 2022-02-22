@@ -69,7 +69,7 @@ const Footer = ({menu, menu2}) => {
       <div className="bg-black-default text-center md:text-left">
         <div className="lg:flex flex-wrap justify-between text-xs max-w-screen-2xl mx-auto py-4 md:py-8 w-full px-6 md:px-8 text-white-0">
             <div className="mb-4 lg:mb-0 text-xs">
-              © {new Date().getFullYear()} Ely Exotics all rights reserved <span className="text-xs px-2 hidden md:inline-block">|</span> <span className="text-xs block md:inline-block">Website by <span className="font-bold text-secondary-default text-xs">volley.digital</span></span>
+              © {new Date().getFullYear()} Ely Exotics all rights reserved <span className="text-xs px-2 hidden md:inline-block">|</span> <span className="text-xs block md:inline-block">Website by <a href="https://volley.digital" target="_blank" className="font-bold text-secondary-default text-xs">volley.digital</a></span>
             </div>
             <div className="text-xs">
               <Link className="text-xs duration-300 hover:text-primary-default" to="/privacy-policy">Privacy Policy</Link><span className="px-2 text-xs">|</span><Link className="text-xs  duration-300 hover:text-primary-default" to="/terms-and-conditions">Terms & Conditions</Link>
