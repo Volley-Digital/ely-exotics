@@ -64,7 +64,7 @@ const Layout = ({ children }) => {
     },
     {
       text: 'Shop',
-      url: 'http://138.68.190.194',
+      url: 'https://shop.elyexotics.co.uk',
       order: 'order-first'
     },
   ]
