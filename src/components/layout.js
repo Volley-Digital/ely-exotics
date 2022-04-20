@@ -44,8 +44,8 @@ const Layout = ({ children }) => {
       order: 'order-first'
     },
     {
-      text: 'Showcase',
-      url: '/gallery',
+      text: 'Letterbox live food',
+      url: 'https://shop.elyexotics.co.uk/product-category/letterbox-live-food',
       hidden: true
     },
     {

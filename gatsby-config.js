@@ -8,15 +8,15 @@ module.exports = {
     title: `Ely Exotics`,
     description: `Exotic Pet Store based in Ely, Cambridgeshire`,
     author: `@elyexotics`,
-    siteUrl: `localhost:8000`
+    siteUrl: `https://www.elyexotics.co.uk/`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-tailwind`,
-        short_name: `starter`,
+        name: `ely-exotics`,
+        short_name: `ely-exotics`,
         start_url: `/`,
         background_color: fullConfig.theme.colors.white.default,
         theme_color: fullConfig.theme.colors.black.default,
@@ -70,6 +70,7 @@ module.exports = {
     `gatsby-plugin-sass`, 
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-no-index`,
+    `gatsby-plugin-netlify`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
     //   options: {
