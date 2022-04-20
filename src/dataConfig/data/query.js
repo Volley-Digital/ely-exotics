@@ -1,11 +1,11 @@
 module.exports.data =  `{
-  pages: allContentfulPage {
+  pages: allContentfulPage(filter: {dummyContent: {ne: true}}) {
     nodes {
       id
       slug
     }
   }
-  animals: allContentfulAnimal {
+  animals: allContentfulAnimal(filter: {dummyContent: {ne: true}}) {
     nodes {
       id
       slug
@@ -23,7 +23,7 @@ module.exports.data =  `{
       }
     }
   }
-  categories: allContentfulCategories(sort: {order: ASC, fields: title}) {
+  categories: allContentfulCategories(filter: {dummyContent: {ne: true}}, sort: {order: ASC, fields: title}) {
     nodes {
       id
       slug
@@ -36,7 +36,7 @@ module.exports.data =  `{
       }
     }
   }
-  taxonomies: allContentfulTaxonomy {
+  taxonomies: allContentfulTaxonomy(filter: {dummyContent: {ne: true}}) {
     nodes {
       slug
       id
@@ -45,13 +45,13 @@ module.exports.data =  `{
       }
     }
   }
-  careGuides: allContentfulCareGuides {
+  careGuides: allContentfulCareGuides(filter: {dummyContent: {ne: true}}) {
     nodes {
       slug
       id
     }
   }
-  posts: allContentfulPosts {
+  posts: allContentfulPosts(filter: {dummyContent: {ne: true}}) {
     nodes {
       id
       slug
