@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
 const SEO = ({ description, lang, meta, keywords, title }) => {
-  const { site } = useStaticQuery(graphql`
+  const { site, seoImage } = useStaticQuery(graphql`
     query DefaultSEOQuery {
       site {
         siteMetadata {
@@ -12,8 +12,17 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
           author
         }
       }
+      seoImage: file(relativePath: {eq: "thumbnail.jpg"}) {
+        childImageSharp {
+          original {
+            src
+          }
+        } 
+      }
     }
   `);
+
+  const image = seoImage.childImageSharp.original.src
 
   const metaDescription = description || site.siteMetadata.description;
 
@@ -38,6 +47,16 @@ const SEO = ({ description, lang, meta, keywords, title }) => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        ,
+        {
+          property: `twitter:image`,
+          content: image,
+        },
+        ,
+        {
+          property: `og:image`,
+          content: image,
         },
       ]
         .concat(

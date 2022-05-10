@@ -11,7 +11,8 @@ const index = ({data}) => {
   return (
     <Layout noOverlayHeader>
       <SEO
-      title={page.title}
+        title={page.metaTitle ? page.metaTitle : page.title}
+        description={page.childContentfulPageMetaDescriptionTextNode ? page.childContentfulPageMetaDescriptionTextNode.metaDescription : null}
       />
       <Hero 
         title={page.hero.title} 
