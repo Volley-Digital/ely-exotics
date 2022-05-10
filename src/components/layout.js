@@ -39,7 +39,7 @@ const Layout = ({ children }) => {
     },
     {
       icon: info,
-      text: 'Care Gudies',
+      text: 'Care Guides',
       url: '/care-guides',
       order: 'order-first'
     },
