@@ -69,7 +69,6 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`, 
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-no-index`,
     `gatsby-plugin-netlify`,
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
