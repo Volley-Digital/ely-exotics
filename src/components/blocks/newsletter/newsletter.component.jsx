@@ -49,6 +49,7 @@ const Newsletter = ({title, text, image, bgColour = '272D3D', marginBottom, ligh
                         </svg>
                     </button>
                 </form>
+                <p className={`${light ? 'text-black-default' : 'text-white-0'} md:max-w-xs lg:max-w-md xl:max-w-lg mt-5 text-xs font-light`}>By subscribing to our newsletter you are agreeing to receive marketing emails from us. We do not share you data with 3rd parties as laid out in our privacy policy</p>
             </section>
             {image && <figure className="w-full md:w-1/2 relative md:absolute h-64 md:h-full md:w-1/2 right-0 top-0">
                 <BackgroundImage tag="div" fluid={image} className="w-full h-full" />
