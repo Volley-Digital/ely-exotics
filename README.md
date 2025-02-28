@@ -1,4 +1,4 @@
-# Gatsby Starter Tailwind
+# ELY Exotics brochure site
 
 ## Get started
 
